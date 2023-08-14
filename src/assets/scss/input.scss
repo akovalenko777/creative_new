@@ -1,0 +1,98 @@
+.did-floating-label-content { 
+  position:relative; 
+}
+.did-floating-label {
+  color:#495057; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:12px;
+  top:13px;
+  padding:0 5px;
+  background:#fff;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.did-floating-input {
+  &:focus{
+    outline:none;
+    ~ .did-floating-label{
+      top:-10px;
+      font-size:14px;
+    }
+  }
+}
+
+.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+  top:-10px;
+  font-size:14px;
+}
+
+p.input-error {
+  font-size: 12px;
+  color: #ff214f;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px!important;
+  p.input-error {
+    position: absolute;
+    left: 0;
+    bottom: -35px;
+  }
+}
+
+.has-error {
+  input, textarea {
+    border-color: #ff214f;
+  }
+}
+
+.check-wrap {
+  input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    + label {
+      position: relative;
+      padding-left: 34px;
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #ced4da;
+        border-radius: 0.15rem;
+        cursor: pointer;
+      }
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 6px;
+        border-left: 2px solid #ff214f;
+        border-bottom: 2px solid #ff214f;
+        position: absolute;
+        left: 6px;
+        top: 7px;
+        transform: rotate(-45deg);
+        opacity: 0;
+        transition: all .2s ease;
+      }
+    }
+    &:focus + label::before {
+      border-color: #ffa1b4;
+      box-shadow: 0 0 0 0.2rem rgba(255, 33, 79, 0.25);
+    }
+    &:checked + label::after {
+      opacity: 1;
+    }
+  }
+
+}

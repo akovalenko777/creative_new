@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "ti-vector",
+    "title": "UX/UI Design",
+    "descr": "Here at a creative web studio, we provide solutions for website design and development services catering to all sizes of companies in a way that fits your unique needs."
+  },
+  {
+    "icon": "ti-filter",
+    "title": "Web Development",
+    "descr": "When stepping into the overwhelming internet world, everyone desires to have a unique and low-cost professional website design."
+  },
+  {
+    "icon": "ti-mobile",
+    "title": "App Design",
+    "descr": "Web page design layout will adjust by itself as people change the device to visit the site."
+  }
+]
